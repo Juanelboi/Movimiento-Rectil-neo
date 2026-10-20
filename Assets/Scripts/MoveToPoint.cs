@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class MoveToPoint : MonoBehaviour
 {
-    public Vector3 goal; // The point to move towards
-    private float speed = 1f; 
+    public Transform goal; // The point to move towards
+    public float speed = 1f; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,13 +18,16 @@ public class MoveToPoint : MonoBehaviour
         //this.transform.Translate(goal * Time.deltaTime);
         //goal.y += aceleracionSubida * Time.deltaTime;
         //
-        this.transform.Translate(goal.normalized * speed*Time.deltaTime);
-
+        this.transform.LookAt(goal.position);
+        Vector3 direction = (goal.position - this.transform.position);
+        this.transform.Translate(direction.normalized * speed*Time.deltaTime, Space.World);
+        Debug.DrawRay(this.transform.position, direction, Color.red);
     }
+
 
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(goal, 0.5f);
+        Gizmos.DrawWireSphere(goal.position, 0.5f);
     }
 }
