@@ -15,10 +15,8 @@ namespace UnityStandardAssets.Utility
         private int numPoints;
         private Vector3[] points;
         private float[] distances;
-
         public float editorVisualisationSubsteps = 100;
         public float Length { get; private set; }
-
         public Transform[] Waypoints
         {
             get { return waypointList.items; }
