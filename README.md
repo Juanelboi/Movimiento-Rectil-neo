@@ -40,4 +40,29 @@ c. No cambie la velocidad de 0.1f por eso se ve la velocidad tan reducida pero a
 <img width="1080" height="608" alt="5" src="https://github.com/user-attachments/assets/e3de9102-17dc-41a0-bf84-4e125ba18e6e" />
 
 ---
-6.
+6. Aplicar el vector forward no haría falta calcular la distancia entre los puntos para sacar la dirección de movimiento ya que al mirar al punto ya se mueve a este
+
+ ---
+ 7. Añadiendo una precisión al movimiento para distancias pequeñas se elimina el problema del jittering.
+
+<img width="1080" height="608" alt="7" src="https://github.com/user-attachments/assets/e96635b4-5105-46b2-b479-065e2df3fade" />
+
+---
+8. Al introducir el slerp el cilindro realiza un giro más natural y lento que al usar lookAt
+
+<img width="640" height="360" alt="8" src="https://github.com/user-attachments/assets/e429fc36-d87b-4541-9544-72a8d583ac3b" />
+
+---
+10. Usé un sistema de Waypoints a partir del tag creado Waypoint en el que el cilindro usa una lista de estos objetos y va circulando por esta
+
+<img width="640" height="360" alt="10" src="https://github.com/user-attachments/assets/d6d9f759-d677-41bf-928f-a3eb2fc64334" />
+
+---
+11. Apliqué el sistema dado de waypoints.
+
+<img width="640" height="360" alt="11" src="https://github.com/user-attachments/assets/5ba966ee-32f7-4522-ae76-e1abd6ad2aa5" />
+
+
+
+
+
